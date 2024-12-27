@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "UploadTouristPlace";
+}
+
+<h2>UploadTouristPlace</h2>
+<form method="post"action="saveTouristPlace"enctype="multipart/form-data">
+    <table>
+        <tr>
+            <th>Tourist Place Id</th>
+            <td>
+                <input type="text"
+                       name="TouristPlaceId"
+                       id="TouristPlaceId" />
+            </td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>
+                <input type="text"
+                       name="TouristPlaceName"
+                       id="TouristPlaceName" />
+            </td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>
+                <textarea name="Description"
+                          id="Description"
+                          rows="5" cols="150">
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td>
+                <input type="text"
+                       name="Location"
+                       id="Location" />
+            </td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>
+                <input type="checkbox"
+                       name="Status"
+                       id="Status" />
+            </td>
+        </tr>
+        <tr>
+            <th>Moreinfo</th>
+            <td>
+                <input type="text"
+                       name="Moreinfo"
+                       id="Moreinfo" />
+            </td>
+        </tr>
+        <tr>
+            <th>Select Tourist Plsce Image</th>
+            <td>
+                <input type="file"
+                       name="Files"
+                       id="Files" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button"
+                       value="clear" />
+            </td>
+            <td>
+                <input type="submit"
+                       value="Save TouristPlace"/>
+            </td>
+        </tr>
+    </table>
+</form>
+

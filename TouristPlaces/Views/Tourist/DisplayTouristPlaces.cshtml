@@ -1,0 +1,36 @@
+﻿@using TouristPlaces.Models
+@model List<TouristPlace>
+@{
+    ViewBag.Title = "DisplayTouristPlaces";
+}
+
+<h2>Display Tourist Places</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @{
+        foreach (TouristPlace tp in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@Url.Content(tp.ImagePath)" class="card-img-top" alt="@tp.TouristPlaceName">
+                    <div class="card-body">
+                        <h5 class="card-title">@tp.TouristPlaceName</h5>
+                        <p class="card-text">
+                            @tp.Description
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-link"
+                           href="@tp.Moreinfo"
+                           target="_blank">More Info</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+
+
+</div>
+
